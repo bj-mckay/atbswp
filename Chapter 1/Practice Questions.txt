@@ -1,0 +1,19 @@
+1. Operators: *, -, /, +
+   Values: 'hello', -88.8, 5
+
+2. Variable: spam
+   String: 'spam'
+
+3. String, Integer, Float
+
+4. Expressions are made up of values and operators; and always evaluate down to a singe value.
+
+5. A statement represents an actoin or command. (like an assignment statement in the case of variables or a print statement)
+
+6. 21
+
+7. spamspamspam
+
+8. A variable name cannot start with a number
+
+9. int, float, srt
