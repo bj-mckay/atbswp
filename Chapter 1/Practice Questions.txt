@@ -18,4 +18,4 @@
 
 9. int, float, srt
 
-10. 99 is being evaluated as an int and not a str. This could be fixed by expresing '99' with quotes or using the str(99) funtion.
+10. 99 is being evaluated as an int and not a str. This could be fixed by expresing '99' with quotes or using the str(99) function.
