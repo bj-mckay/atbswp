@@ -1,0 +1,74 @@
+1. True and False
+
+2. and, or, not
+
+3. and:
+   True and True = True
+   True and False = False
+   False and True = False
+   False and False = False
+
+   or:
+   True or True = True
+   True or True = True
+   False or True = True
+   False or False = False
+
+   not:
+   not True = False
+   not False = True
+
+4. False
+   False
+   True
+   False
+   False
+   True
+
+5. ==, !=, <, >, <=, >=
+
+6. Assignment operator is '=', while the Equal to operator is '=='
+
+7. Conditions always evaluate down to a boolean value. You would use a condition in a flow control statement.
+
+8. 
+spam = 0
+if spam == 10:
+1)  print('eggs')
+    if spam > 5:
+2)      print('bacon')
+    else:
+3)      print('ham')
+    print('spam')
+print('spam')
+
+9. 
+spam = 2
+if spam == 1:
+    print('Hello')
+elif spam == 2:
+    print('Howdy')
+else:
+    print('Greetings')
+
+10. ctrl-C
+
+11. break = breaks out of a loop's clause early | continue = jumps back to the start of the loop and reevaluates the loops condition
+
+12.
+range(10) = 10 iterations
+range(0, 10) = Start at 0 and stop and 10
+range(0, 10, 1) = Start at 0 and stop at 10, stepping 1 increment at a time
+
+13.
+for loop
+for i in range(1, 11):
+    print(i)
+
+while loop
+i = 0
+while i < 11:
+    print(i)
+    i = i + 1
+
+14. spam.bacon()
