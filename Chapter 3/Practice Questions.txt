@@ -1,0 +1,30 @@
+1. A function is like a miniprogram within a program
+
+2. When the function is called
+
+3. def statement
+
+4. Functions are blocks of code (def) that sit idle until called.   
+   Function calls send the execution to the top of the funtions code.
+
+5. There is only one global scope however there is a local scope for every function called.
+
+6. They are destroyed.
+
+7. A return value is the value that a function call evaluates to.
+   Yes, a return value can be part of an expression.
+
+8. The None value
+
+9. You can use the global statement
+
+10. NoneType
+
+11. Imports the module 'areallyourpetsnamederic'
+
+12. spam.bacon()
+
+13. You could handle them with try and except statements.
+
+14. try = Potentially problematic code
+	except = Expected error followed by code to handle what happens when the error occurs
