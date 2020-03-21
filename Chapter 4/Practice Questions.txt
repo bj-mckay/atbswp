@@ -1,0 +1,33 @@
+1. An empty list
+
+2. spam[2]= 'hello'
+
+3. 'd'
+
+4. 'd'
+
+5. ['a', 'b']
+
+6. 1
+
+7. [3.14, 'cat', 11, 'cat', True, 99]
+
+8. [3.14, 11, 'cat', True, 99]
+
+9. concatenation = + | replication = *
+
+10. append() Adds an element at the end of the list | insert() Adds an element at the specified position
+
+11. list.remove(item) Removes the first item with the specified value | list.pop(index_position) Removes the item at the specified index position
+
+12. They both have an index and are both sequence data types
+
+13. Lists are mutable while tuples are not
+
+14. (42,)
+
+15. With the tuple() and list() funtions respectively 
+
+16. References to the computer memory location
+
+17. copy.copy() constructs a new object the inserts references to the original while copy.deepcopy() will copy objects recusively such as list of lists
