@@ -1,0 +1,8 @@
+1. {}
+2. {'foo': 42}
+3. list are order while dictionaries are unordered / items in a dictionary are accessed via keys rather than index position
+4. You get a KeyError because the key doesnt exist
+5. No difference
+6. 'cat' in spam will check the key while 'cat' in spam.values() will specificaly check for the string 'cat' in dict_values
+7. spam.setdefault('color', black)
+8. Pretty Printing | pprint.pprint()
