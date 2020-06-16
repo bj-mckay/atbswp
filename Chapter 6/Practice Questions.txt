@@ -1,0 +1,10 @@
+1. invokes alternate interpretation on subsequent character ie. '\n'
+2. '\n' = new line and '\t' = tab
+3. '\\'
+4. The use of double quotes negates the need for the escapre charachter
+5. By using multi-line strings between a pair of '''
+6. 'e', 'Hello', 'Hello', 'lo, World'
+7. 'HELLO', True, 'hello'
+8. ['Remember,', 'remember,', 'the', 'fifth', 'of', 'November.'] | 'There-can-be-only-one.'
+9. ljust(), rjust(), center()
+10. strip(), rstrip(), lstrip()
