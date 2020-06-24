@@ -1,42 +1,83 @@
-from . import ICON, SHOTGUN, COLOR, BRAINS, roll, rollDie
-import BRAINS
-import zombiedice
-import random
+import zombiedice, random
 
-
-class MyZombie:
-    def __init__(self, name, minBrains=2) :
-        # All zombies must have a name:
+class RandomRoller:
+    def __init__(self, name):
         self.name = name
-        self.minBrains = minBrains
 
     def turn(self, gameState):
-        # A bot that, after the first roll, randomly decides if it will continue or stop
-        diceRollResults = zombiedice.roll()
-        while diceRollResults and random.randint(0, 1) == 0:
-            diceRollResults = zombiedice.roll()
-        # A bot that stops rolling after it has rolled two brains
-        brains = 0 # number of brains rolled this turn
-        while brains < self.minBrains:
-            diceRollResults = zombiedice.roll()
+        diceRollResults = zombiedice.roll() 
+        while diceRollResults is not None:
+            if random.randint(1,2) == 1:
+                diceRollResults = zombiedice.roll()
+            else:
+                break
 
-            if diceRollResults is None:
-                return
+class TwoBrains:
+    def __init__(self, name):
+        self.name = name
 
-            brains += diceRollResults[BRAIN] # increase brains by the number of brains die rolls.
-        
+    def turn(self, gameState):
+        diceRollResults = zombiedice.roll() 
+        brains = 0
+        while diceRollResults is not None:
+            brains += diceRollResults['brains']
+            if brains < 2:
+                diceRollResults = zombiedice.roll() 
+            else:
+                break
 
+class TwoGuns:
+    def __init__(self, name):
+        self.name = name
 
+    def turn(self, gameState):
+        diceRollResults = zombiedice.roll() 
+        shotgun = 0
+        while diceRollResults is not None:
+            shotgun += diceRollResults['shotgun']
+            if shotgun < 2:
+                diceRollResults = zombiedice.roll() 
+            else:
+                break
 
+class StopAtTwoGuns:
+    def __init__(self, name):
+        self.name = name
+
+    def turn(self, gameState):
+        diceRollResults = zombiedice.roll() 
+        shotgun = 0
+        for i in range(random.randint(1,4)):
+            shotgun += diceRollResults['shotgun']
+            if shotgun < 2:
+                diceRollResults = zombiedice.roll()
+            else:
+                break
+
+class MoreGunsThanBrains:
+    def __init__(self, name):
+        self.name = name
+
+    def turn(self, gameState):
+        diceRollResults = zombiedice.roll() 
+        shotgun = 0
+        brains = 0        
+        while diceRollResults is not None:
+            shotgun += diceRollResults['shotgun']
+            brains += diceRollResults['brains']
+            if brains < shotgun:
+                break
+            else:
+                diceRollResults = zombiedice.roll()
 zombies = (
-    zombiedice.examples.RandomCoinFlipZombie(name='Random'),
-    zombiedice.examples.RollsUntilInTheLeadZombie(name='Until Leading'),
-    zombiedice.examples.MinNumShotgunsThenStopsZombie(name='Until 2 Shotguns', minShotguns=2),
-    zombiedice.examples.MinNumShotgunsThenStopsZombie(name='Until 1 Shotgun', minShotguns=1),
-    MyZombie(name='My Zombie Bot'),
-    # Add any other zombie players here.
+    RandomRoller(name='Ranom Roller'),
+    TwoBrains(name='Two Brains'),
+    TwoGuns(name='Two Guns'),
+    StopAtTwoGuns(name='Stop at two guns'),
+    MoreGunsThanBrains(name='More guns than brains'),
+    
 )
 
 # Uncomment one of the following lines to run in CLI or Web GUI mode:
-zombiedice.runTournament(zombies=zombies, numGames=100)
+zombiedice.runTournament(zombies=zombies, numGames=10000)
 #zombiedice.runWebGui(zombies=zombies, numGames=1000)
