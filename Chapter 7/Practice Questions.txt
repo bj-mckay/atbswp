@@ -1,0 +1,10 @@
+1. re.compille()
+2. To prevent confusion when using escape charachters
+3. Returns the first instance of a matched object
+4. Call search() or findall() on a regex object 
+5. Group 0 is the entire match, Group 1 is the area code and Group 2 is the 7 digit phone number
+6. By using escape charachters 
+7. If there are groups in the regex then a tuple will be returned
+8. 
+9. 
+10.
