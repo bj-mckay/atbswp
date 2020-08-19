@@ -5,6 +5,18 @@
 5. Group 0 is the entire match, Group 1 is the area code and Group 2 is the 7 digit phone number
 6. By using escape charachters 
 7. If there are groups in the regex then a tuple will be returned
-8. 
-9. 
-10.
+8. Or (either)
+9. Optional matching and non-greedy matching
+10. * means “match zero or more,” the + (or plus) means “match one or more.”
+11. {3} means match where the patern is found 3 times, {3,5} means to match where the patern is found at least 3 time but no more than 5
+12. \d is any digit 0-9, \w is any letter or the underscore and \s is any space, tab or newline
+13.  \D is any charachter that is not a numeric digit 0 to 9, \W is any charachter that is not a letter, numeric digit or the underscore charachter and \S is any charachter that is not a space tab or new line
+14. . means any single charachter except newline and the star means zero or more of the proceeding charachter. Dot-star uses greedy mode while dot-star-questionmark will match in a non greedy fasion
+15. [0-9a-z]
+16. By passing re.IGNORECASE or re.I
+17. . means any single charachter except newline re.DOTALL when passed ans the second argument to re.compile matches all charachters including newline
+18. X drummers, X pipers, five rings, X hens
+19. Ignore whitespace and comments in the regulare expression string
+20. ^\d{1,3}(,\d{3})*$
+21. ([A-Z][a-z]|[A-Z][a-z][a-z].*)\s(Watanabe)
+22. re.compile(r'(Alice|Bob|Carol)\s(eats|pets|throws)\s(apples|cats|baseballs)\.', re.IGNORECASE)
