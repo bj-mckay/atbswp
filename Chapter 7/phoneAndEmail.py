@@ -23,8 +23,8 @@ for groups in phoneRegex.findall(text):
         phoneNum += ' x' + groups[8]
     matches.append(phoneNum)
 for groups in emailRegex.findall(text):
-    matches.append(groups[0])      
-# TODO: Copy results to the clipboard.
+    matches.append(groups[0])
+    
 if len(matches) > 0:
     pyperclip.copy('The following phone numbers and email addresses where found:\n'+'\n'.join(matches))
     #print('Copied to clipboard:')
