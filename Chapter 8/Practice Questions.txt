@@ -1,0 +1,7 @@
+1. No
+2. To reduce the number of characters typed
+3. inputInt will validate whole number while inputFloat will allow decimals
+4. inputNum(min=0, max=99)
+5. a list of regex strings
+6. raise a RetryLimitException
+7. returns 'hello'
